@@ -1,25 +1,21 @@
-import pytest
+import logging
 import pathlib
 
-target = pathlib.Path("reports/screens")
+LOG_DIR = pathlib.Path("logs")
+LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-target.mkdir(parents=True, exist_ok=True)
+logger = logging.getLogger("automation")
+logger.setLevel(logging.INFO)
 
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-  """Se ejecuta despues de cada fase (setup/call/teardown) de cada test"""
-  outcome = yield # Dejamos que Pytest genere el reporte
+if not logger.handlers:
+    formatter = logging.Formatter(
+        "%(asctime)s - %(levelname)s - %(message)s"
+    )
 
-  report = outcome.get_result() # Obtenemos el objeto report
+    file_handler = logging.FileHandler(
+        LOG_DIR / "automation.log",
+        encoding="utf-8"
+    )
 
-  # Solo capturamos en fallos de la fase principal
-  if report.when == "call" and report.failed:
-    driver = item.funcargs.get("driver") # Obtenemos el fixture driver
-
-    if driver:
-      file_name = target / f"{item.name}.png"
-
-      driver.save_screenshot(str(file_name)) # Captura
-
-      if hasattr(report, "extra"):
-        report.extra.append({"name": "screenshot", "format": "image", "content": str(file_name)})
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)

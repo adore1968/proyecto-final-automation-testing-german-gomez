@@ -1,4 +1,5 @@
 from pages.login_page import LoginPage
+from pages.inventory_page import InventoryPage
 import pytest
 from utils.data import leer_csv_login
 from utils.logger import logger
@@ -26,6 +27,12 @@ def test_login(driver, usuario, clave, descripcion, debe_funcionar):
     logger.info("Verificando redireccion exitosa")
 
     assert "inventory.html" in driver.current_url, f"Login fallo para {usuario}"
+
+    inventory_page = InventoryPage(driver)
+
+    titulo = inventory_page.obtener_titulo()
+
+    assert titulo == "Products", f"Titulo incorrecto: {titulo}"
 
     logger.info("Test de login completado exitosamente")
   else:
