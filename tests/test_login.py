@@ -8,8 +8,8 @@ CASOS_LOGIN = leer_csv_login("data/login.csv")
 
 # Test parametrizado que verifica el login con datos del CSV
 @pytest.mark.ui
-@pytest.mark.parametrize("usuario, clave, descripcion, debe_funcionar", CASOS_LOGIN)
-def test_login(driver, usuario, clave, descripcion, debe_funcionar):
+@pytest.mark.parametrize("usuario, clave, debe_funcionar, descripcion", CASOS_LOGIN)
+def test_login(driver, usuario, clave, debe_funcionar, descripcion):
   logger.info(f"Iniciando login con usuario: {usuario}")
 
   # Paso 1: Abrir pagina de Login
