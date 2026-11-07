@@ -1,0 +1,25 @@
+
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Logs
+logs/
+*.log
+
+# Reportes y capturas
+reports/
+*.html
+*.png
+
+# Variables de entorno
+.env
+
+# Editores
+.vscode/
+.idea/
