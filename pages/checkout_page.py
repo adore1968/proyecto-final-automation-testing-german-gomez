@@ -119,8 +119,12 @@ class CheckoutPage:
 
     finalizar_boton.click()
 
-  # Metodo para obtener el mensaje de confirmacion de la compra
+ # Metodo para obtener el mensaje de confirmacion de la compra
   def obtener_mensaje_confirmacion(self):
-    mensaje_elemento = self.wait.until(EC.visibility_of_element_located(self._COMPLETE_HEADER))
+    self.wait.until(EC.url_contains("checkout-complete.html"))
+
+    mensaje_elemento = self.wait.until(
+      EC.visibility_of_element_located(self._COMPLETE_HEADER)
+    )
 
     return mensaje_elemento.text
