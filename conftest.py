@@ -1,4 +1,3 @@
-import pytest
 from utils.driver import create_driver
 import pytest
 import pathlib
@@ -6,6 +5,10 @@ from datetime import datetime
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 import pytest_html
+
+BASE_REQRES = "https://reqres.in/api"
+
+BASE_JSONPLACEHOLDER = "https://jsonplaceholder.typicode.com"
 
 target = pathlib.Path("reports/screens")
 
@@ -32,7 +35,7 @@ def pytest_runtest_makereport(item, call):
       if not hasattr(report, "extras"):
         report.extras = []
 
-      report.extras.append(pytest_html.extras.image(str(file_name)))
+      report.extras.append(pytest_html.extras.image(str(file_name.resolve())))
 
 @pytest.fixture
 def driver():
@@ -53,3 +56,22 @@ def usuario_logueado(driver):
   assert "inventory.html" in driver.current_url
 
   return InventoryPage(driver)
+
+
+@pytest.fixture(scope="module")
+def get_url():
+  return f"{BASE_REQRES}/users?page=2"
+
+@pytest.fixture(scope="module")
+def post_url():
+  return f"{BASE_REQRES}/users"
+
+@pytest.fixture(scope="module")
+def login_url():
+  return f"{BASE_REQRES}/login"
+
+@pytest.fixture(scope="module")
+def delete_by_id_url():
+  def _get_url(delete_id):
+    return f"{BASE_JSONPLACEHOLDER}/posts/{delete_id}"
+  return _get_url

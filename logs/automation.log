@@ -82,3 +82,66 @@
 2026-11-06 19:41:30,048 - INFO - Iniciando login con usuario: usuario_inexistente
 2026-11-06 19:41:30,868 - INFO - Completando credenciales...
 2026-11-06 19:41:31,522 - INFO - Verificando redireccion exitosa
+2026-11-07 14:28:49,614 - INFO - Iniciando login con usuario: standard_user
+2026-11-07 14:28:50,522 - INFO - Completando credenciales...
+2026-11-07 14:28:51,279 - INFO - Verificando redireccion exitosa
+2026-11-07 14:28:51,473 - INFO - Test de login completado exitosamente
+2026-11-07 14:28:55,644 - INFO - Iniciando login con usuario: locked_out_user
+2026-11-07 14:28:56,299 - INFO - Completando credenciales...
+2026-11-07 14:28:56,932 - INFO - Verificando redireccion exitosa
+2026-11-07 14:29:00,987 - INFO - Iniciando login con usuario: problem_user
+2026-11-07 14:29:01,956 - INFO - Completando credenciales...
+2026-11-07 14:29:02,479 - INFO - Verificando redireccion exitosa
+2026-11-07 14:29:02,613 - INFO - Test de login completado exitosamente
+2026-11-07 14:29:07,017 - INFO - Iniciando login con usuario: performance_glitch_user
+2026-11-07 14:29:07,500 - INFO - Completando credenciales...
+2026-11-07 14:29:13,008 - INFO - Verificando redireccion exitosa
+2026-11-07 14:29:13,180 - INFO - Test de login completado exitosamente
+2026-11-07 14:29:17,676 - INFO - Iniciando login con usuario: standard_user
+2026-11-07 14:29:18,480 - INFO - Completando credenciales...
+2026-11-07 14:29:19,228 - INFO - Verificando redireccion exitosa
+2026-11-07 14:29:24,231 - INFO - Iniciando login con usuario: usuario_inexistente
+2026-11-07 14:29:25,081 - INFO - Completando credenciales...
+2026-11-07 14:29:25,831 - INFO - Verificando redireccion exitosa
+2026-11-07 14:32:04,596 - INFO - Iniciando login con usuario: standard_user
+2026-11-07 14:32:05,355 - INFO - Completando credenciales...
+2026-11-07 14:32:06,114 - INFO - Verificando redireccion exitosa
+2026-11-07 14:32:06,296 - INFO - Test de login completado exitosamente
+2026-11-07 14:32:11,098 - INFO - Iniciando login con usuario: locked_out_user
+2026-11-07 14:32:11,694 - INFO - Completando credenciales...
+2026-11-07 14:32:12,281 - INFO - Verificando redireccion exitosa
+2026-11-07 14:32:17,651 - INFO - Iniciando login con usuario: problem_user
+2026-11-07 14:32:18,515 - INFO - Completando credenciales...
+2026-11-07 14:32:19,080 - INFO - Verificando redireccion exitosa
+2026-11-07 14:32:19,228 - INFO - Test de login completado exitosamente
+2026-11-07 14:32:23,817 - INFO - Iniciando login con usuario: performance_glitch_user
+2026-11-07 14:32:24,296 - INFO - Completando credenciales...
+2026-11-07 14:32:29,912 - INFO - Verificando redireccion exitosa
+2026-11-07 14:32:30,191 - INFO - Test de login completado exitosamente
+2026-11-07 14:32:34,880 - INFO - Iniciando login con usuario: standard_user
+2026-11-07 14:32:35,651 - INFO - Completando credenciales...
+2026-11-07 14:32:36,269 - INFO - Verificando redireccion exitosa
+2026-11-07 14:32:40,824 - INFO - Iniciando login con usuario: usuario_inexistente
+2026-11-07 14:32:41,503 - INFO - Completando credenciales...
+2026-11-07 14:32:41,993 - INFO - Verificando redireccion exitosa
+2026-11-07 14:37:01,113 - INFO - Iniciando login con usuario: standard_user
+2026-11-07 14:37:02,395 - INFO - Completando credenciales...
+2026-11-07 14:37:03,157 - INFO - Verificando redireccion exitosa
+2026-11-07 14:37:03,333 - INFO - Test de login completado exitosamente
+2026-11-07 14:37:07,270 - INFO - Iniciando login con usuario: locked_out_user
+2026-11-07 14:37:07,905 - INFO - Completando credenciales...
+2026-11-07 14:37:08,508 - INFO - Verificando redireccion exitosa
+2026-11-07 14:37:14,064 - INFO - Iniciando login con usuario: problem_user
+2026-11-07 14:37:14,709 - INFO - Completando credenciales...
+2026-11-07 14:37:15,322 - INFO - Verificando redireccion exitosa
+2026-11-07 14:37:15,491 - INFO - Test de login completado exitosamente
+2026-11-07 14:37:20,068 - INFO - Iniciando login con usuario: performance_glitch_user
+2026-11-07 14:37:20,839 - INFO - Completando credenciales...
+2026-11-07 14:37:26,535 - INFO - Verificando redireccion exitosa
+2026-11-07 14:37:27,119 - INFO - Test de login completado exitosamente
+2026-11-07 14:37:31,784 - INFO - Iniciando login con usuario: standard_user
+2026-11-07 14:37:32,627 - INFO - Completando credenciales...
+2026-11-07 14:37:33,157 - INFO - Verificando redireccion exitosa
+2026-11-07 14:37:37,955 - INFO - Iniciando login con usuario: usuario_inexistente
+2026-11-07 14:37:38,971 - INFO - Completando credenciales...
+2026-11-07 14:37:39,953 - INFO - Verificando redireccion exitosa

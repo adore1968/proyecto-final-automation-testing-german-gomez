@@ -1,6 +1,8 @@
 import pytest
 from utils.data import leer_json_productos
 from pages.cart_page import CartPage
+from utils.logger import logger
+
 
 PRODUCTOS = leer_json_productos("data/productos.json")
 
@@ -12,23 +14,23 @@ def test_agregar_producto_desde_json(usuario_logueado, producto):
 
   nombre_producto = producto["nombre"]
 
-  print(f"Agregando producto: {nombre_producto}")
+  logger.info(f"Agregando producto: {nombre_producto}")
 
   # Obtener contador inicial del carrito
   contador_inicial = inventory_page.obtener_contador_carrito()
 
-  print(f"Contador inicial: {contador_inicial}")
+  logger.info(f"Contador inicial: {contador_inicial}")
 
   # Agregar producto especifico
   inventory_page.agregar_producto_por_nombre(nombre_producto)
 
   # Verificar que el contador se incremento
   contador_final = inventory_page.obtener_contador_carrito()
-  print(f"Contador final: {contador_final}")
+  logger.info(f"Contador final: {contador_final}")
 
   assert contador_final == contador_inicial + 1, f"El contador no se incremento correctamente para {nombre_producto}"
 
-  print("Producto agregado correctamente")
+  logger.info("Producto agregado correctamente")
 
 @pytest.mark.ui
 def test_verificar_producto_en_carrito(usuario_logueado):
@@ -36,7 +38,11 @@ def test_verificar_producto_en_carrito(usuario_logueado):
 
   nombre_producto = "Sauce Labs Backpack"
 
+  logger.info(f"Agregando producto: {nombre_producto}")
+
   inventory_page.agregar_producto_por_nombre(nombre_producto)
+
+  logger.info("Navegando hacia el carrito...")
 
   inventory_page.navegar_al_carrito()
 
@@ -47,3 +53,5 @@ def test_verificar_producto_en_carrito(usuario_logueado):
   nombres_productos = cart_page.obtener_nombres_productos()
 
   assert nombre_producto in nombres_productos, f"El producto {nombre_producto} no se encuentra en el carrito"
+
+  logger.info("El producto fue agregado correctamente al carrito")
